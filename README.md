@@ -15,6 +15,10 @@ demos how to use Entitlement API to protect your copyright of your
 apps.
 
 Please refer to blogs:
-http://adndevblog.typepad.com/cloud_and_mobile/2014/03/how-to-protect-my-intellectual-property-of-my-app-on-autodesk-exchange-part-1.html 
-http://adndevblog.typepad.com/cloud_and_mobile/2014/04/how-to-protect-my-intellectual-property-of-my-app-on-autodesk-exchange-part-2.html 
-http://adndevblog.typepad.com/cloud_and_mobile/2014/05/how-to-protect-my-intellectual-property-of-my-app-on-autodesk-exchange-part-3.html 
+
+http://adndevblog.typepad.com/cloud_and_mobile/2014/03/how-to-protect-my-intellectual-property-of-my-app-on-autodesk-exchange-part-1.html
+
+http://adndevblog.typepad.com/cloud_and_mobile/2014/04/how-to-protect-my-intellectual-property-of-my-app-on-autodesk-exchange-part-2.html
+
+http://adndevblog.typepad.com/cloud_and_mobile/2014/05/how-to-protect-my-intellectual-property-of-my-app-on-autodesk-exchange-part-3.html
+
