@@ -46,22 +46,19 @@ namespace AcadPluginApp
         // Hard coded consumer and secret keys and base URL.
         // In real world Apps, these values need to secured.
         // One approach is to encrypt and/or obfuscate these values
-        private const string m_ConsumerKey = "your consumer key";
-        private const string m_ConsumerSecret = "your consumer secert";
-        private const string m_baseURL = "https://accounts.autodesk.com";
+	    private const string m_ConsumerKey = "your consumer key";
+	    private const string m_ConsumerSecret = "your consumer secert";
+	    private const string m_baseURL = "https://accounts.autodesk.com";
+
         private const string AUTODESK_EXCHANGE_URL = "https://apps.exchange.autodesk.com";
-
-
         private const string CHECK_ENTITLEMENT_ENDPOINT = "webservices/checkentitlement";
 
         private static RestClient m_Client;
         private string m_oAuthReqToken;
         private string m_oAuthReqTokenSecret;
-        private string m_strPIN;
 
         private string m_oAuthAccessToken;
         private string m_oAuthAccessTokenSecret;
-        private string m_sessionHandle;
 
 
         public myAppWin()
@@ -71,6 +68,11 @@ namespace AcadPluginApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            ////this only applies to AutoCAD 2014 or 2015
+            //string internalUserId = GetUserIdWithSystemVariable();
+
+            //This is a common way with OAuth, 
+            //This process can be used in other products like Revit, inventor, and others
             string internalUserId = GetUserIdWithOAuth();
             if (internalUserId == string.Empty)
             {
@@ -96,6 +98,20 @@ namespace AcadPluginApp
                 logOutput.Text = "You are not entitled to use this app."
                     +"please buy it from Autodesk Exchange.";
             }
+        }
+
+        private string GetUserIdWithSystemVariable()
+        {
+            string usrId = Autodesk.AutoCAD.ApplicationServices
+                .Application.GetSystemVariable("ONLINEUSERID").ToString();
+
+            if (usrId == string.Empty)
+            {
+                MessageBox.Show("Please sign in with your Autodesk 360 account first.");
+            }
+
+            return usrId;
+
         }
 
         private string GetUserIdWithOAuth()
@@ -203,6 +219,11 @@ namespace AcadPluginApp
             {
                 return false;
             }
+        }
+
+        private void btnDoMyWork_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Enjoy this app ;) ");
         }
 
 
