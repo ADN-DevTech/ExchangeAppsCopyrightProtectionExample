@@ -18,13 +18,13 @@
 
 using RestSharp;
 using RestSharp.Authenticators;
-using RestSharp.Contrib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Text;
+using System.Web;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;

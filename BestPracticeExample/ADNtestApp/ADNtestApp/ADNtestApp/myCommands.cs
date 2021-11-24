@@ -13,7 +13,7 @@ using System.IO;
 using System.Globalization;
 using RestSharp;
 using RestSharp.Authenticators;
-using RestSharp.Contrib;
+
 using System.Net;
 
 // This line is not mandatory, but improves loading performances
